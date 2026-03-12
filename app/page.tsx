@@ -48,44 +48,74 @@ export default function Home() {
   };
 
   // const trendingProducts = [
-  //   { name: 'SKINN Noura Nectar Eau De Parfum for her - 100 ml', price: '₹ 3,295', image: '/product1.jpg' },
+  //   { name: 'attaro Noura Nectar Eau De Parfum for her - 100 ml', price: '₹ 3,295', image: '/product1.jpg' },
   //   { name: 'Classic Nova for Men- 100 ml', price: '₹ 3,095', image: '/product2.jpg' },
   //   { name: 'Classic Aura for Women- 100 ml', price: '₹ 3,095', image: '/product3.jpg' },
-  //   { name: 'SKINN 247 Aqua 100 ml Eau De Parfum', price: '₹ 1,396', oldPrice: '₹ 1,745', discount: '20% Off', image: '/product4.jpg' },
+  //   { name: 'attaro 247 Aqua 100 ml Eau De Parfum', price: '₹ 1,396', oldPrice: '₹ 1,745', discount: '20% Off', image: '/product4.jpg' },
   // ];
 
   // const topSellers = [
-  //   { name: 'SKINN Nox Oud 100 ml Eau De Parfum For him', price: '₹ 4,995', image: '/product5.jpg' },
-  //   { name: 'Skinn by Titan Nude 100 ML Perfume for Women EDP', price: '₹ 2,795', image: '/product6.jpg' },
-  //   { name: 'SKINN Noura Iris Eau De Parfum For her', price: '₹ 3,295', image: '/product7.jpg' },
-  //   { name: 'Skinn by Titan Steele 100 ML Perfume for Men EDP', price: '₹ 2,795', image: '/product8.jpg' },
+  //   { name: 'attaro Nox Oud 100 ml Eau De Parfum For him', price: '₹ 4,995', image: '/product5.jpg' },
+  //   { name: 'attaro by Titan Nude 100 ML Perfume for Women EDP', price: '₹ 2,795', image: '/product6.jpg' },
+  //   { name: 'attaro Noura Iris Eau De Parfum For her', price: '₹ 3,295', image: '/product7.jpg' },
+  //   { name: 'attaro by Titan Steele 100 ML Perfume for Men EDP', price: '₹ 2,795', image: '/product8.jpg' },
   // ];
 
-  const products: Product[] = [
+  const newArrivals: Product[] = [
     {
       id: 1,
-      name: "SKINN Noura Nectar Eau De Parfum for Her",
-      image: "/perfume-1.jpg",
-      price: 3295,
+      name: "ATTARO Noura Nectar Eau De Parfum for Her",
+      image: "/product/product-1.png",
+      price: 999,
       badge: "New Drop",
     },
     {
       id: 2,
       name: "Classic Nova for Men - 100 ml",
-      image: "/perfume-2.jpg",
-      price: 3095,
+      image: "/product/product-2.png",
+      price: 999,
     },
     {
       id: 3,
       name: "Classic Aura for Women - 100 ml",
-      image: "/perfume-3.jpg",
-      price: 3095,
+      image: "/product/product-3.png",
+      price: 999,
     },
     {
       id: 4,
-      name: "SKINN 24Seven Aqua 100 ml Eau De Parfum",
-      image: "/perfume-4.jpg",
-      price: 1396,
+      name: "ATTARO 24Seven Aqua 100 ml Eau De Parfum",
+      image: "/product/product-4.png",
+      price: 999,
+      // oldPrice: 999,
+      badge: "Best-Seller",
+    },
+  ];
+
+  const bestSellers: Product[] = [
+    {
+      id: 1,
+      name: "ATTARO Noura Nectar Eau De Parfum for Her",
+      image: "/product/product-5.png",
+      price: 999,
+      badge: "New Drop",
+    },
+    {
+      id: 2,
+      name: "Classic Nova for Men - 100 ml",
+      image: "/product/product-6.png",
+      price: 999,
+    },
+    {
+      id: 3,
+      name: "Classic Aura for Women - 100 ml",
+      image: "/product/product-7.png",
+      price: 999,
+    },
+    {
+      id: 4,
+      name: "ATTARO 24Seven Aqua 100 ml Eau De Parfum",
+      image: "/product/product-8.png",
+      price: 999,
       oldPrice: 1745,
       badge: "Best-Seller",
     },
@@ -181,8 +211,8 @@ export default function Home() {
 
         <VideoSlider />
 
-        <section className="pt-3 max-w-7xl mx-auto"> <ProductSlider products={products} title="New Arrivals" /></section>
-        <section className="max-w-7xl mx-auto"> <ProductSlider products={products} title="Best Sellers" /></section>
+        <section className="pt-3 max-w-7xl mx-auto"> <ProductSlider products={newArrivals} title="New Arrivals" /></section>
+        <section className="max-w-7xl mx-auto"> <ProductSlider products={bestSellers} title="Best Sellers" /></section>
 
         <section className="w-full relative">
 
@@ -202,7 +232,7 @@ export default function Home() {
                     A gift that captures every feeling unexpressed, every word unsaid
                     and every emotion unknown, is a gift that lasts forever. Show your
                     loved ones how much they mean to you with fragrances as unique as
-                    your bond, because some things are #BestSaidWithSkinn
+                    your bond, because some things are #BestSaidWithattaro
                   </p>
 
                   <button className="px-14 py-2.5 font-medium border border-white rounded-full hover:bg-white hover:text-black transition">
@@ -300,7 +330,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-gray-600 leading-relaxed">
-                  I've tried many perfumes but SKINN fragrances feel incredibly premium.
+                  I've tried many perfumes but attaro fragrances feel incredibly premium.
                   The fragrance lasts all day and I constantly receive compliments.
                 </p>
 
@@ -388,13 +418,13 @@ export default function Home() {
           <div className="w-2/5">
 
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-6">
-              THE SCENTED <br /> WORLD OF SKINN
+              THE SCENTED <br /> WORLD OF ATTARO
             </h2>
 
             <p className="text-gray-300 leading-relaxed text-md">
               Perfumery is a rare art and it's time to meet an artist extraordinaire.
               Presenting #NotesFromAPerfumer, featuring principal perfumer Ilias
-              Ermenidis, the creative genius behind SKINN Noura perfumes, in
+              Ermenidis, the creative genius behind attaro Noura perfumes, in
               conversation with yours truly Mira Kapoor.
             </p>
 
@@ -519,12 +549,12 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 py-12">
 
             <h3 className="text-lg md:text-xl font-medium mb-4">
-              Explore SKINN by Titan's Perfume Collection - Premium and Long-lasting Fragrances for Every Mood
+              Explore attaro by Titan's Perfume Collection - Premium and Long-lasting Fragrances for Every Mood
             </h3>
 
             <p className="text-gray-600 leading-relaxed">
-              Welcome to the world of fragrances from SKINN - House of TITAN. Every fragrance in the SKINN perfume collection
-              is an invitation to embrace elegance and timeless luxury. Crafted in France with meticulous care, SKINN perfumes
+              Welcome to the world of fragrances from attaro - House of TITAN. Every fragrance in the attaro perfume collection
+              is an invitation to embrace elegance and timeless luxury. Crafted in France with meticulous care, attaro perfumes
               blend premium quality with contemporary flair, offering long-lasting perfumes that redefine sophistication.
             </p>
 

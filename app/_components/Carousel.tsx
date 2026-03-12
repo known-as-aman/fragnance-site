@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/slide-1.webp",
+    image: "/banner-1.jpeg",
   },
   {
     id: 2,

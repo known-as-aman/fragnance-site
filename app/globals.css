@@ -32,7 +32,7 @@ html {
 }
 
 .backgroud-image-custom{
-  background-image: url("/public/gift-img.webp");
+  background-image: url("/gift-img.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

@@ -72,14 +72,14 @@ export default function ProductSlider({ products = [], title = "Trending Product
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-[280px] object-contain p-6 transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-[280px] object-contain transition-transform duration-500 group-hover:scale-110"
                 />
 
-                {product.badge && (
+                {/* {product.badge && (
                   <span className="absolute top-3 left-3 bg-red-600 text-white text-xs px-2 py-1 rounded">
                     {product.badge}
                   </span>
-                )}
+                )} */}
               </div>
 
               {/* Product Info */}

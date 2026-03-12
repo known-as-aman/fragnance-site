@@ -64,11 +64,15 @@ export default function Header() {
 
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="border rounded-full w-7 h-7 flex items-center justify-center text-sm">
+            {/* <div className="border rounded-full w-7 h-7 flex items-center justify-center text-sm">
               S
             </div>
             <span className="font-semibold tracking-widest text-lg">
               SKINN
+            </span> */}
+            <img src="/logo.png" alt="logo" className="w-10 h-10" />
+            <span className="font-semibold tracking-widest text-lg">
+              ATTARO
             </span>
           </div>
 
