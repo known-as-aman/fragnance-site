@@ -122,45 +122,41 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#fafaf8]">
 
       <Headers />
       <HeroCarousel />
 
       <div className="mx-auto">
 
-        <section className="py-12 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
+        <section className="py-20 md:py-28 max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-3">
 
-            {/* FOR HER */}
             <a
               href="/women"
-              className="group relative overflow-hidden rounded-xl h-[320px] md:h-[420px]"
+              className="group relative overflow-hidden h-[400px] md:h-[560px]"
             >
               <img
                 src="/for-her.webp"
                 alt="For Her"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/25 to-transparent" />
 
-              {/* Content */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center">
+              <div className="relative z-10 h-full flex flex-col items-center justify-end pb-12 text-white text-center">
 
-                <h2 className="text-2xl md:text-3xl tracking-widest font-light">
-                  FOR HER
+                <h2 className="text-4xl md:text-5xl tracking-[0.3em] font-thin italic mb-4">
+                  For Her
                 </h2>
 
-                <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition duration-300">
-                  <span className="text-sm tracking-wide">Explore Collection</span>
-
+                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                  <span className="text-[11px] tracking-[0.25em] uppercase border-b border-white/50 pb-0.5">Explore Collection</span>
                   <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-2"
+                    className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M9 5l7 7-7 7" />
@@ -169,35 +165,31 @@ export default function Home() {
               </div>
             </a>
 
-            {/* FOR HIM */}
             <a
               href="/men"
-              className="group relative overflow-hidden rounded-xl h-[320px] md:h-[420px]"
+              className="group relative overflow-hidden h-[400px] md:h-[560px]"
             >
               <img
                 src="/for-him.webp"
                 alt="For Him"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/25 to-transparent" />
 
-              {/* Content */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center">
+              <div className="relative z-10 h-full flex flex-col items-center justify-end pb-12 text-white text-center">
 
-                <h2 className="text-2xl md:text-3xl tracking-widest font-light">
-                  FOR HIM
+                <h2 className="text-4xl md:text-5xl tracking-[0.3em] font-thin italic mb-4">
+                  For Him
                 </h2>
 
-                <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition duration-300">
-                  <span className="text-sm tracking-wide">Explore Collection</span>
-
+                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                  <span className="text-[11px] tracking-[0.25em] uppercase border-b border-white/50 pb-0.5">Explore Collection</span>
                   <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-2"
+                    className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M9 5l7 7-7 7" />
@@ -211,8 +203,8 @@ export default function Home() {
 
         <VideoSlider />
 
-        <section className="pt-3 max-w-7xl mx-auto"> <ProductSlider products={newArrivals} title="New Arrivals" /></section>
-        <section className="max-w-7xl mx-auto"> <ProductSlider products={bestSellers} title="Best Sellers" /></section>
+        <section className="max-w-7xl mx-auto"><ProductSlider products={newArrivals} title="New Arrivals" /></section>
+        <section className="max-w-7xl mx-auto"><ProductSlider products={bestSellers} title="Best Sellers" /></section>
 
         <section className="w-full relative">
 
@@ -300,101 +292,55 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full bg-white py-20">
+        <section className="w-full bg-[#faf8f4] py-24">
 
-          <div className="max-w-7xl mx-auto px-4">
-
+          <div className="max-w-7xl mx-auto px-6">
 
             <div className="text-center mb-14">
-              <h2 className="text-3xl md:text-4xl font-semibold">
+              <span className="gold-line" />
+              <h2 className="text-4xl md:text-5xl font-light italic text-[#1a1a1a]">
                 What Our Customers Say
               </h2>
-              <p className="text-gray-500 mt-3">
+              <p className="text-[#8b7d6b] mt-4 text-xs tracking-[0.22em] uppercase">
                 Real experiences from fragrance lovers across India
               </p>
             </div>
 
-            <div className="flex gap-4 overflow-x-auto scrollbar-hide">
+            <div className="flex gap-5 overflow-x-auto no-scrollbar pb-4">
 
-              <div className="min-w-[320px] max-w-[360px] bg-[#fafafa] p-8 rounded-xl border border-gray-300">
+              {[
+                { name: "Riya Sharma", city: "Delhi", review: "I've tried many perfumes but ATTARO fragrances feel incredibly premium. The fragrance lasts all day and I constantly receive compliments." },
+                { name: "Arjun Mehta", city: "Mumbai", review: "The fragrance quality is outstanding. It smells luxurious and performs better than many international brands I've used." },
+                { name: "Neha Kapoor", city: "Bangalore", review: "Absolutely love the elegance of these perfumes. Beautiful packaging and the scent lasts surprisingly long." },
+                { name: "Kabir Singh", city: "Chandigarh", review: "The fragrance profile is sophisticated and long-lasting. Definitely my new everyday signature scent." },
+              ].map((t) => (
+                <div key={t.name} className="min-w-[290px] max-w-[320px] bg-white p-8 border border-[#e8e0d5]">
 
-                <div className="flex items-center gap-4 mb-5">
-                  <img
-                    src="/for-him.webp"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold">Riya Sharma</p>
-                    <p className="text-sm text-gray-500">Delhi</p>
+                  <div className="flex gap-0.5 mb-5">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3.5 h-3.5 text-[#C9A84C]" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
                   </div>
-                </div>
 
-                <p className="text-gray-600 leading-relaxed">
-                  I've tried many perfumes but attaro fragrances feel incredibly premium.
-                  The fragrance lasts all day and I constantly receive compliments.
-                </p>
+                  <p className="text-[#4a4540] text-sm leading-relaxed mb-6">
+                    "{t.review}"
+                  </p>
 
-              </div>
-
-              <div className="min-w-[320px] max-w-[360px] bg-[#fafafa] p-8 rounded-xl border border-gray-300">
-
-                <div className="flex items-center gap-4 mb-5">
-                  <img
-                    src="/for-him.webp"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold">Arjun Mehta</p>
-                    <p className="text-sm text-gray-500">Mumbai</p>
+                  <div className="flex items-center gap-3 pt-5 border-t border-[#f0ebe3]">
+                    <img
+                      src="/for-him.webp"
+                      className="w-10 h-10 rounded-full object-cover ring-2 ring-[#C9A84C]/20"
+                    />
+                    <div>
+                      <p className="text-sm font-medium tracking-wide text-[#1a1a1a]">{t.name}</p>
+                      <p className="text-[10px] text-[#8b7d6b] tracking-[0.2em] uppercase">{t.city}</p>
+                    </div>
                   </div>
+
                 </div>
-
-                <p className="text-gray-600 leading-relaxed">
-                  The fragrance quality is outstanding. It smells luxurious and
-                  performs better than many international brands I've used.
-                </p>
-
-              </div>
-
-              <div className="min-w-[320px] max-w-[360px] bg-[#fafafa] p-8 rounded-xl border border-gray-300">
-
-                <div className="flex items-center gap-4 mb-5">
-                  <img
-                    src="/for-him.webp"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold">Neha Kapoor</p>
-                    <p className="text-sm text-gray-500">Bangalore</p>
-                  </div>
-                </div>
-
-                <p className="text-gray-600 leading-relaxed">
-                  Absolutely love the elegance of these perfumes. Beautiful packaging
-                  and the scent lasts surprisingly long.
-                </p>
-
-              </div>
-
-              <div className="min-w-[320px] max-w-[360px] bg-[#fafafa] p-8 rounded-xl border border-gray-300">
-
-                <div className="flex items-center gap-4 mb-5">
-                  <img
-                    src="/for-him.webp"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold">Kabir Singh</p>
-                    <p className="text-sm text-gray-500">Chandigarh</p>
-                  </div>
-                </div>
-
-                <p className="text-gray-600 leading-relaxed">
-                  The fragrance profile is sophisticated and long-lasting. Definitely
-                  my new everyday scent.
-                </p>
-
-              </div>
+              ))}
 
             </div>
 
@@ -402,11 +348,11 @@ export default function Home() {
 
         </section>
 
-        <div className="w-screen mx-auto flex gap-12 items-center bg-black text-white px-14">
+        <div className="w-full flex flex-col lg:flex-row gap-16 items-center bg-[#0d0d0d] text-white px-8 lg:px-20 py-20">
 
-          <div className="w-3/5 aspect-video py-10 h-[500px]">
+          <div className="w-full lg:w-3/5 h-[340px] lg:h-[440px]">
             <iframe
-              className="w-full h-full rounded-sm p-1 border-2 border-gray-800"
+              className="w-full h-full border border-[#C9A84C]/20"
               src="https://www.youtube.com/embed/zyOdppVsPRY?si=zz8qucnmvNKDRKWx"
               title="Notes From A Perfumer"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -414,17 +360,18 @@ export default function Home() {
             />
           </div>
 
+          <div className="w-full lg:w-2/5">
 
-          <div className="w-2/5">
+            <span className="block w-10 h-px bg-[#C9A84C] mb-7" />
 
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-6">
-              THE SCENTED <br /> WORLD OF ATTARO
+            <h2 className="text-4xl md:text-5xl font-light leading-tight mb-6 italic">
+              The Scented <br /> World of Attaro
             </h2>
 
-            <p className="text-gray-300 leading-relaxed text-md">
+            <p className="text-[#a8a09a] leading-relaxed text-sm">
               Perfumery is a rare art and it's time to meet an artist extraordinaire.
               Presenting #NotesFromAPerfumer, featuring principal perfumer Ilias
-              Ermenidis, the creative genius behind attaro Noura perfumes, in
+              Ermenidis, the creative genius behind ATTARO Noura perfumes, in
               conversation with yours truly Mira Kapoor.
             </p>
 
@@ -432,28 +379,28 @@ export default function Home() {
 
         </div>
 
-        <section className="w-full bg-gray-100">
+        <section className="w-full bg-[#faf8f4]">
 
-          <div className="max-w-6xl mx-auto py-16 px-4 text-center">
+          <div className="max-w-6xl mx-auto py-20 px-6 text-center">
 
-            <h2 className="text-2xl md:text-3xl font-medium mb-10">
-              Find a store near you
+            <span className="gold-line" />
+            <h2 className="text-3xl md:text-4xl font-light italic text-[#1a1a1a] mb-12">
+              Find a Store Near You
             </h2>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
 
-              <button className="flex items-center justify-center gap-2 bg-pink-800 text-white px-10 py-4 font-medium hover:bg-pink-900 transition">
+              <button className="flex items-center justify-center gap-2.5 bg-[#0d0d0d] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase hover:bg-[#C9A84C] transition-colors duration-300">
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="1.5"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z" />
                   <circle cx="12" cy="11" r="2" />
                 </svg>
-
                 Use My Current Location
               </button>
 
@@ -462,10 +409,10 @@ export default function Home() {
                 <input
                   type="text"
                   placeholder="Enter a pincode or city"
-                  className="px-4 py-4 w-full md:w-[300px] border border-gray-300 focus:outline-none"
+                  className="px-5 py-4 w-full md:w-[280px] border border-[#d4c9b8] bg-white text-sm focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
                 />
 
-                <button className="px-6 border border-gray-700 font-medium hover:bg-gray-900 hover:text-white transition">
+                <button className="px-7 bg-[#0d0d0d] text-white text-xs tracking-[0.2em] uppercase hover:bg-[#C9A84C] transition-colors duration-300">
                   Search
                 </button>
 
@@ -474,13 +421,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-gray-200">
-            <div className="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+          <div className="bg-[#0d0d0d]">
+            <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
 
-              <div className="flex items-start gap-4">
-
+              <div className="flex items-start gap-5">
                 <svg
-                  className="w-10 h-10 text-gray-700"
+                  className="w-9 h-9 text-[#C9A84C] shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"
@@ -489,20 +435,17 @@ export default function Home() {
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 7l1.5 3h3l-2.5 2 1 3-3-2-3 2 1-3-2.5-2h3z" />
                 </svg>
-
                 <div>
-                  <h4 className="font-semibold text-sm">100% ORIGINAL</h4>
-                  <p className="text-sm text-gray-600">
-                    All products are original and go through strict quality check.
+                  <h4 className="text-[11px] tracking-[0.2em] uppercase text-white mb-2" style={{ fontFamily: 'var(--font-jost), sans-serif' }}>100% Original</h4>
+                  <p className="text-sm text-[#8b8078] leading-relaxed">
+                    All products are original and go through strict quality checks.
                   </p>
                 </div>
-
               </div>
 
-              <div className="flex items-start gap-4">
-
+              <div className="flex items-start gap-5">
                 <svg
-                  className="w-10 h-10 text-gray-700"
+                  className="w-9 h-9 text-[#C9A84C] shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"
@@ -511,20 +454,17 @@ export default function Home() {
                   <path d="M3 7h13l3 3v7H3z" />
                   <path d="M7 7v5h10" />
                 </svg>
-
                 <div>
-                  <h4 className="font-semibold text-sm">7 Day RETURN</h4>
-                  <p className="text-sm text-gray-600">
-                    Use our hassle free method to return.
+                  <h4 className="text-[11px] tracking-[0.2em] uppercase text-white mb-2" style={{ fontFamily: 'var(--font-jost), sans-serif' }}>7-Day Return</h4>
+                  <p className="text-sm text-[#8b8078] leading-relaxed">
+                    Use our hassle-free method to return.
                   </p>
                 </div>
-
               </div>
 
-              <div className="flex items-start gap-4">
-
+              <div className="flex items-start gap-5">
                 <svg
-                  className="w-10 h-10 text-gray-700"
+                  className="w-9 h-9 text-[#C9A84C] shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"
@@ -533,34 +473,32 @@ export default function Home() {
                   <path d="M3 7h13l3 3v7H3z" />
                   <path d="M16 16l2 2 3-3" />
                 </svg>
-
                 <div>
-                  <h4 className="font-semibold text-sm">Shipping</h4>
-                  <p className="text-sm text-gray-600">
-                    Free Shipping & Returns all across India
+                  <h4 className="text-[11px] tracking-[0.2em] uppercase text-white mb-2" style={{ fontFamily: 'var(--font-jost), sans-serif' }}>Free Shipping</h4>
+                  <p className="text-sm text-[#8b8078] leading-relaxed">
+                    Free shipping & returns all across India.
                   </p>
                 </div>
-
               </div>
 
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="max-w-7xl mx-auto px-6 py-14">
 
-            <h3 className="text-lg md:text-xl font-medium mb-4">
-              Explore attaro by Titan's Perfume Collection - Premium and Long-lasting Fragrances for Every Mood
+            <h3 className="text-xl md:text-2xl font-light italic text-[#1a1a1a] mb-5">
+              Explore ATTARO by Titan's Perfume Collection — Premium and Long-lasting Fragrances for Every Mood
             </h3>
 
-            <p className="text-gray-600 leading-relaxed">
-              Welcome to the world of fragrances from attaro - House of TITAN. Every fragrance in the attaro perfume collection
-              is an invitation to embrace elegance and timeless luxury. Crafted in France with meticulous care, attaro perfumes
+            <p className="text-[#6b6560] leading-relaxed text-sm max-w-4xl">
+              Welcome to the world of fragrances from ATTARO — House of TITAN. Every fragrance in the ATTARO perfume collection
+              is an invitation to embrace elegance and timeless luxury. Crafted in France with meticulous care, ATTARO perfumes
               blend premium quality with contemporary flair, offering long-lasting perfumes that redefine sophistication.
             </p>
 
             <div className="flex justify-end mt-6">
-              <button className="text-pink-700 font-medium tracking-wide hover:underline">
-                KNOW MORE
+              <button className="text-[#C9A84C] text-xs tracking-[0.25em] uppercase hover:opacity-70 transition-opacity duration-200 border-b border-[#C9A84C] pb-0.5">
+                Know More
               </button>
             </div>
 

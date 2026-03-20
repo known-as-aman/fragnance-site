@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Buy Best Perfumes For Men & Women Online - SKINN",
-  description: "Explore SKINN by Titan's premium perfume collection. Long-lasting fragrances for men and women. Shop luxury perfumes online.",
+  title: "ATTARO – House of Titan | Premium Fragrances",
+  description: "Explore ATTARO by Titan's premium perfume collection. Long-lasting fragrances for men and women. Shop luxury perfumes online.",
 };
 
 export default function RootLayout({
@@ -24,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${cormorant.variable} ${jost.variable} antialiased`}>
         {children}
       </body>
     </html>
