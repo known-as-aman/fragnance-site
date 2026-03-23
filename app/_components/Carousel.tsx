@@ -7,7 +7,7 @@ const DURATION = 5000;
 const slides = [
   {
     id: 1,
-    image: "/banner-1.jpeg",
+    image: "/slide-1.png",
     eyebrow: "New Collection",
     title: "The Art of\nRefined Scent",
     subtitle: "Where craftsmanship meets desire",
@@ -15,7 +15,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/slide-2.webp",
+    image: "/slide-2.png",
     eyebrow: "For Her",
     title: "Timeless\nFemininity",
     subtitle: "Fragrances crafted for the modern woman",
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/slide-3.webp",
+    image: "/slide-3.png",
     eyebrow: "For Him",
     title: "Bold &\nDistinctive",
     subtitle: "Scents that command presence",

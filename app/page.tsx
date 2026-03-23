@@ -203,8 +203,8 @@ export default function Home() {
 
         <VideoSlider />
 
-        <section className="max-w-7xl mx-auto"><ProductSlider products={newArrivals} title="New Arrivals" /></section>
-        <section className="max-w-7xl mx-auto"><ProductSlider products={bestSellers} title="Best Sellers" /></section>
+        <ProductSlider products={newArrivals} title="New Arrivals" />
+        <ProductSlider products={bestSellers} title="Best Sellers" />
 
         <section className="w-full relative">
 
@@ -487,11 +487,11 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 py-14">
 
             <h3 className="text-xl md:text-2xl font-light italic text-[#1a1a1a] mb-5">
-              Explore ATTARO by Titan's Perfume Collection — Premium and Long-lasting Fragrances for Every Mood
+              Explore ATTARO's Perfume Collection — Premium and Long-lasting Fragrances for Every Mood
             </h3>
 
             <p className="text-[#6b6560] leading-relaxed text-sm max-w-4xl">
-              Welcome to the world of fragrances from ATTARO — House of TITAN. Every fragrance in the ATTARO perfume collection
+              Welcome to the world of fragrances from ATTARO. Every fragrance in the ATTARO perfume collection
               is an invitation to embrace elegance and timeless luxury. Crafted in France with meticulous care, ATTARO perfumes
               blend premium quality with contemporary flair, offering long-lasting perfumes that redefine sophistication.
             </p>
