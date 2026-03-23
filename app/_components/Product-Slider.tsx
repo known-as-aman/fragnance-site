@@ -30,7 +30,7 @@ export default function ProductSlider({ products = [], title = "Trending Product
   if (!products.length) return null;
 
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="flex items-end justify-between mb-10 pb-7 border-b border-[#e8e0d5]">
@@ -80,8 +80,9 @@ export default function ProductSlider({ products = [], title = "Trending Product
                 : null;
 
               return (
-                <div
+                <a
                   key={product.id}
+                  href={`/collections/${product.id}`}
                   className="group/card cursor-pointer flex-none w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
                   style={{ scrollSnapAlign: "start" }}
                 >
@@ -137,7 +138,7 @@ export default function ProductSlider({ products = [], title = "Trending Product
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
               );
             })}
           </div>

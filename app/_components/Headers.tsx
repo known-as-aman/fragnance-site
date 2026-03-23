@@ -6,13 +6,13 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    "MEN",
-    "WOMEN",
-    "COLLECTIONS",
-    "GIFTING",
-    "FASTRACK FRAGRANCES",
-    "SKINN BLOG",
-    "SALE",
+    { label: "MEN", href: "#" },
+    { label: "WOMEN", href: "#" },
+    { label: "COLLECTIONS", href: "/collections" },
+    { label: "GIFTING", href: "#" },
+    { label: "FASTRACK FRAGRANCES", href: "#" },
+    // { label: "SKINN BLOG", href: "#" },
+    { label: "SALE", href: "#" },
   ];
 
   return (
@@ -57,17 +57,17 @@ export default function Header() {
             </div>
 
             <nav className="hidden lg:flex items-center gap-8 text-xs tracking-[0.15em]">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className={`relative py-1 transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#C9A84C] after:transition-all after:duration-300 hover:after:w-full ${
-                    item === "SALE" ? "text-[#8B1A1A]" : "text-[#1a1a1a] hover:text-[#C9A84C]"
-                  }`}
-                >
-                  {item}
-                </a>
-              ))}
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`relative py-1 transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#C9A84C] after:transition-all after:duration-300 hover:after:w-full ${
+                  item.label === "SALE" ? "text-[#8B1A1A]" : "text-[#1a1a1a] hover:text-[#C9A84C]"
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
             </nav>
 
             <div className="flex items-center gap-5">
@@ -112,17 +112,17 @@ export default function Header() {
           {menuOpen && (
             <div className="lg:hidden border-t border-[#e8e0d5] py-6">
               <nav className="flex flex-col gap-5 text-xs tracking-[0.2em]">
-                {navItems.map((item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className={`transition-colors duration-200 ${
-                      item === "SALE" ? "text-[#8B1A1A]" : "text-[#1a1a1a] hover:text-[#C9A84C]"
-                    }`}
-                  >
-                    {item}
-                  </a>
-                ))}
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`transition-colors duration-200 ${
+                    item.label === "SALE" ? "text-[#8B1A1A]" : "text-[#1a1a1a] hover:text-[#C9A84C]"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ))}
               </nav>
             </div>
           )}

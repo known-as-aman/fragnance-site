@@ -201,7 +201,7 @@ export default function Home() {
           </div>
         </section>
 
-        <VideoSlider />
+        {/* <VideoSlider /> */}
 
         <ProductSlider products={newArrivals} title="New Arrivals" />
         <ProductSlider products={bestSellers} title="Best Sellers" />
@@ -241,53 +241,88 @@ export default function Home() {
 
         </section>
 
-        <section className="w-full bg-[#2c2c2c] mb-32">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center">
-            <div className="w-full h-[520px]">
-              <img
-                src={data[index].image}
-                className="w-full h-[130%]"
-              />
+            <section className="w-full bg-[#0d0d0d]">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 min-h-[640px]">
+
+            <div className="relative overflow-hidden h-[280px] sm:h-[380px] lg:h-auto">
+              {data.map((item, i) => (
+                <img
+                  key={item.image}
+                  src={item.image}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+                  style={{ opacity: i === index ? 1 : 0 }}
+                />
+              ))}
+              <div className="absolute inset-y-0 right-0 w-20 bg-linear-to-r from-transparent to-[#0d0d0d] hidden lg:block" />
             </div>
 
-            <div className="bg-[#2c2c2c] text-white h-[520px] flex items-center justify-center relative px-10">
+            <div className="bg-[#0d0d0d] text-white relative flex items-center px-10 sm:px-14 lg:px-16 py-14 lg:py-0">
+
               <button
                 onClick={prev}
-                className="absolute left-6 text-2xl opacity-70 hover:opacity-100"
+                aria-label="Previous"
+                className="absolute left-2 lg:left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-white/35 hover:text-white border border-white/10 hover:border-white/40 transition-all duration-300"
               >
-                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.2" stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
               </button>
 
-              <div className="max-w-md text-center">
-                <h2 className="text-3xl font-semibold mb-6">
+              <div key={index} className="hero-text-enter w-full max-w-sm lg:max-w-md mx-auto lg:mx-0">
+
+                <div className="flex items-center gap-3 mb-8 text-white/30">
+                  <span
+                    className="text-3xl font-light leading-none"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="w-6 h-px bg-white/20" />
+                  <span className="text-xs tracking-[0.2em]">
+                    {String(data.length).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <span className="block w-8 h-px bg-[#C9A84C] mb-6" />
+
+                <h2 className="text-3xl md:text-4xl lg:text-[2.6rem] font-light italic leading-tight mb-6 text-white">
                   {data[index].title}
                 </h2>
 
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-[#a8a09a] text-sm leading-relaxed mb-10">
                   {data[index].description}
                 </p>
 
-                <div className="flex justify-center gap-3 mt-10">
+                <div className="flex items-center gap-3">
                   {data.map((_, i) => (
-                    <span
+                    <button
                       key={i}
-                      className={`w-2.5 h-2.5 rounded-full ${i === index ? "bg-white" : "bg-gray-500"
+                      onClick={() => setIndex(i)}
+                      aria-label={`Go to slide ${i + 1}`}
+                    >
+                      <span
+                        className={`block h-px transition-all duration-300 ${
+                          i === index
+                            ? "w-10 bg-[#C9A84C]"
+                            : "w-5 bg-white/25 hover:bg-white/50"
                         }`}
-                    />
+                      />
+                    </button>
                   ))}
                 </div>
               </div>
 
               <button
                 onClick={next}
-                className="absolute right-6 text-2xl opacity-70 hover:opacity-100"
+                aria-label="Next"
+                className="absolute right-2 lg:right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-white/35 hover:text-white border border-white/10 hover:border-white/40 transition-all duration-300"
               >
-                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 rotate-180">
+                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.2" stroke="currentColor" className="w-4 h-4 rotate-180">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
               </button>
+
             </div>
           </div>
         </section>
@@ -381,41 +416,90 @@ export default function Home() {
 
         <section className="w-full bg-[#faf8f4]">
 
-          <div className="max-w-6xl mx-auto py-20 px-6 text-center">
+          <div className="max-w-7xl mx-auto px-6 py-24">
+            <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
 
-            <span className="gold-line" />
-            <h2 className="text-3xl md:text-4xl font-light italic text-[#1a1a1a] mb-12">
-              Find a Store Near You
-            </h2>
+              <div>
+                <span className="block w-8 h-px bg-[#C9A84C] mb-7" />
+                <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-light italic text-[#1a1a1a] leading-[1.1] mb-6">
+                  Join the House<br />of ATTARO
+                </h2>
+                <p className="text-[#6b6560] text-sm leading-relaxed max-w-sm">
+                  Be the first to discover new arrivals, member-only offers, and curated stories from the world of fine fragrance — delivered with the elegance of the house itself.
+                </p>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                <div className="grid grid-cols-3 gap-6 mt-12 pt-10 border-t border-[#e8e0d5]">
+                  {[
+                    { stat: "12,000+", label: "Community\nMembers" },
+                    { stat: "Weekly", label: "Curated\nUpdates" },
+                    { stat: "Exclusive", label: "Early\nAccess" },
+                  ].map(({ stat, label }) => (
+                    <div key={stat}>
+                      <p
+                        className="text-2xl font-light italic text-[#1a1a1a] leading-none mb-2"
+                        style={{ fontFamily: "var(--font-cormorant), serif" }}
+                      >
+                        {stat}
+                      </p>
+                      <p
+                        className="text-[10px] tracking-[0.18em] uppercase text-[#8b7d6b] leading-relaxed whitespace-pre-line"
+                        style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                      >
+                        {label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-              <button className="flex items-center justify-center gap-2.5 bg-[#0d0d0d] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase hover:bg-[#C9A84C] transition-colors duration-300">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
+              <div className="lg:pl-8">
+                <p
+                  className="text-[11px] tracking-[0.25em] uppercase text-[#8b7d6b] mb-6"
+                  style={{ fontFamily: "var(--font-jost), sans-serif" }}
                 >
-                  <path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z" />
-                  <circle cx="12" cy="11" r="2" />
-                </svg>
-                Use My Current Location
-              </button>
+                  Subscribe to our newsletter
+                </p>
 
-              <div className="flex w-full md:w-auto">
+                <div className="flex flex-col sm:flex-row">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    className="flex-1 px-5 py-4 border border-[#d4c9b8] bg-white text-sm focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
+                  />
+                  <button className="px-8 py-4 bg-[#0d0d0d] text-white text-[11px] tracking-[0.25em] uppercase hover:bg-[#C9A84C] transition-colors duration-300 whitespace-nowrap mt-3 sm:mt-0">
+                    Subscribe
+                  </button>
+                </div>
 
-                <input
-                  type="text"
-                  placeholder="Enter a pincode or city"
-                  className="px-5 py-4 w-full md:w-[280px] border border-[#d4c9b8] bg-white text-sm focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
-                />
+                <p
+                  className="text-[11px] text-[#a09890] tracking-wide mt-4 leading-relaxed"
+                  style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                >
+                  No spam. Unsubscribe anytime. By subscribing you agree to our&nbsp;
+                  <a href="#" className="underline underline-offset-2 hover:text-[#C9A84C] transition-colors duration-200">
+                    Privacy Policy
+                  </a>.
+                </p>
 
-                <button className="px-7 bg-[#0d0d0d] text-white text-xs tracking-[0.2em] uppercase hover:bg-[#C9A84C] transition-colors duration-300">
-                  Search
-                </button>
-
+                <div className="mt-12 space-y-5">
+                  {[
+                    { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Early access to new collections & limited drops" },
+                    { icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z", text: "Exclusive member discounts & private sale access" },
+                    { icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z", text: "Curated fragrance stories & perfumer insights" },
+                  ].map(({ icon, text }) => (
+                    <div key={text} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d={icon} />
+                      </svg>
+                      <p
+                        className="text-[13px] text-[#4a4540] leading-snug"
+                        style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                      >
+                        {text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
             </div>
