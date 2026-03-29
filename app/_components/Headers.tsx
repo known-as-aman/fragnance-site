@@ -10,9 +10,9 @@ export default function Header() {
     { label: "WOMEN", href: "#" },
     { label: "COLLECTIONS", href: "/collections" },
     { label: "GIFTING", href: "#" },
-    { label: "FASTRACK FRAGRANCES", href: "#" },
+    // { label: "FASTRACK FRAGRANCES", href: "#" },
     // { label: "SKINN BLOG", href: "#" },
-    { label: "SALE", href: "#" },
+    // { label: "SALE", href: "#" },
   ];
 
   return (
@@ -26,7 +26,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="bg-white border-b border-[#e8e0d5]">
+      <div className="bg-[#F6F5F2] border-b border-[#E2DFDA]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-[68px]">
 
@@ -110,7 +110,7 @@ export default function Header() {
           </div>
 
           {menuOpen && (
-            <div className="lg:hidden border-t border-[#e8e0d5] py-6">
+            <div className="lg:hidden border-t border-[#E2DFDA] py-6">
               <nav className="flex flex-col gap-5 text-xs tracking-[0.2em]">
               {navItems.map((item) => (
                 <a

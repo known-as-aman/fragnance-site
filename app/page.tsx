@@ -68,26 +68,33 @@ export default function Home() {
       image: "/product/product-1.png",
       price: 999,
       badge: "New Drop",
+      volume: "100 ml",
+      family: "Floral Musk",
     },
     {
       id: 2,
-      name: "Classic Nova for Men - 100 ml",
+      name: "Classic Nova for Men",
       image: "/product/product-2.png",
       price: 999,
+      volume: "100 ml",
+      family: "Citrus Woody",
     },
     {
       id: 3,
-      name: "Classic Aura for Women - 100 ml",
+      name: "Classic Aura for Women",
       image: "/product/product-3.png",
       price: 999,
+      volume: "100 ml",
+      family: "Oriental Floral",
     },
     {
       id: 4,
-      name: "ATTARO 24Seven Aqua 100 ml Eau De Parfum",
+      name: "ATTARO 24Seven Aqua Eau De Parfum",
       image: "/product/product-4.png",
       price: 999,
-      // oldPrice: 999,
-      badge: "Best-Seller",
+      badge: "New Drop",
+      volume: "100 ml",
+      family: "Aquatic Fresh",
     },
   ];
 
@@ -97,114 +104,380 @@ export default function Home() {
       name: "ATTARO Noura Nectar Eau De Parfum for Her",
       image: "/product/product-5.png",
       price: 999,
-      badge: "New Drop",
+      badge: "Best-Seller",
+      volume: "100 ml",
+      family: "Floral Woody",
     },
     {
       id: 2,
-      name: "Classic Nova for Men - 100 ml",
+      name: "Classic Nova for Men",
       image: "/product/product-6.png",
       price: 999,
+      volume: "100 ml",
+      family: "Aromatic Spicy",
     },
     {
       id: 3,
-      name: "Classic Aura for Women - 100 ml",
+      name: "Classic Aura for Women",
       image: "/product/product-7.png",
       price: 999,
+      volume: "100 ml",
+      family: "Floral Oriental",
     },
     {
       id: 4,
-      name: "ATTARO 24Seven Aqua 100 ml Eau De Parfum",
+      name: "ATTARO 24Seven Aqua Eau De Parfum",
       image: "/product/product-8.png",
       price: 999,
       oldPrice: 1745,
       badge: "Best-Seller",
+      volume: "100 ml",
+      family: "Oriental Oud",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafaf8]">
+    <div className="min-h-screen bg-[#F6F5F2]">
 
       <Headers />
       <HeroCarousel />
 
       <div className="mx-auto">
 
-        <section className="py-20 md:py-28 max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-3">
+        <section className="w-full bg-[#F6F5F2] pt-16">
 
-            <a
-              href="/women"
-              className="group relative overflow-hidden h-[400px] md:h-[560px]"
+          <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
+            <p
+              className="text-[10px] tracking-[0.4em] uppercase text-[#C9A84C] mb-5"
+              style={{ fontFamily: "var(--font-jost), sans-serif" }}
             >
-              <img
-                src="/for-her.webp"
-                alt="For Her"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/25 to-transparent" />
-
-              <div className="relative z-10 h-full flex flex-col items-center justify-end pb-12 text-white text-center">
-
-                <h2 className="text-4xl md:text-5xl tracking-[0.3em] font-thin italic mb-4">
-                  For Her
-                </h2>
-
-                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                  <span className="text-[11px] tracking-[0.25em] uppercase border-b border-white/50 pb-0.5">Explore Collection</span>
-                  <svg
-                    className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-
-            <a
-              href="/men"
-              className="group relative overflow-hidden h-[400px] md:h-[560px]"
+              Curated Collections
+            </p>
+            <span className="block w-8 h-px bg-[#C9A84C] mx-auto mb-7" />
+            <h2
+              className="text-4xl md:text-5xl lg:text-[3.2rem] font-light italic text-[#1a1a1a] leading-[1.1] mb-4"
+              style={{ fontFamily: "var(--font-cormorant), serif" }}
             >
-              <img
-                src="/for-him.webp"
-                alt="For Him"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/25 to-transparent" />
-
-              <div className="relative z-10 h-full flex flex-col items-center justify-end pb-12 text-white text-center">
-
-                <h2 className="text-4xl md:text-5xl tracking-[0.3em] font-thin italic mb-4">
-                  For Him
-                </h2>
-
-                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                  <span className="text-[11px] tracking-[0.25em] uppercase border-b border-white/50 pb-0.5">Explore Collection</span>
-                  <svg
-                    className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-
+              Two Worlds, One Signature
+            </h2>
+            <p
+              className="text-[#8b7d6b] text-[11px] tracking-[0.2em] uppercase"
+              style={{ fontFamily: "var(--font-jost), sans-serif" }}
+            >
+              Distinct fragrances crafted for the modern connoisseur
+            </p>
           </div>
+
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-3">
+
+              <a href="/women" className="group relative overflow-hidden h-[520px] md:h-[640px] block">
+                <img
+                  src="/for-her.png"
+                  alt="For Her"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1400 ease-out group-hover:scale-[1.05]"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/35 to-black/10" />
+                <div className="absolute inset-0 bg-linear-to-r from-black/20 to-transparent" />
+
+                <div className="absolute top-8 left-8 flex items-center gap-2.5">
+                  <span className="block w-5 h-px bg-[#C9A84C]" />
+                  <span
+                    className="text-[9px] tracking-[0.45em] uppercase text-[#C9A84C]"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    Femme
+                  </span>
+                </div>
+
+                <div
+                  className="absolute inset-x-0 bottom-0 p-8 md:p-10 text-white"
+                >
+                  <div
+                    className="flex items-center gap-2 mb-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75"
+                  >
+                    <span className="block w-4 h-px bg-[#C9A84C]" />
+                    <span
+                      className="text-[9px] tracking-[0.32em] uppercase text-white/55"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      Rose &middot; Jasmine &middot; White Musk &middot; Oud
+                    </span>
+                  </div>
+
+                  <h2
+                    className="text-[3.6rem] md:text-[4.4rem] font-light italic leading-none mb-3 text-white"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    For Her
+                  </h2>
+
+                  <p
+                    className="text-white/60 text-[11px] tracking-[0.18em] uppercase mb-7 leading-loose"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    Soft luminosity &amp; effortless grace
+                  </p>
+
+                  <div className="flex items-center justify-between pt-5 border-t border-white/15">
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="text-[10px] tracking-[0.3em] uppercase text-white/75 group-hover:text-white transition-colors duration-300"
+                        style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                      >
+                        Explore Collection
+                      </span>
+                      <svg
+                        className="w-3.5 h-3.5 text-[#C9A84C] group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </div>
+                    <span
+                      className="text-[9px] tracking-[0.22em] uppercase text-white/30"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      24 Fragrances
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <a href="/men" className="group relative overflow-hidden h-[520px] md:h-[640px] block">
+                <img
+                  src="/for-him.png"
+                  alt="For Him"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1400 ease-out group-hover:scale-[1.05]"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/35 to-black/10" />
+                <div className="absolute inset-0 bg-linear-to-r from-black/20 to-transparent" />
+
+                <div className="absolute top-8 left-8 flex items-center gap-2.5">
+                  <span className="block w-5 h-px bg-[#C9A84C]" />
+                  <span
+                    className="text-[9px] tracking-[0.45em] uppercase text-[#C9A84C]"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    Homme
+                  </span>
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 text-white">
+                  <div
+                    className="flex items-center gap-2 mb-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75"
+                  >
+                    <span className="block w-4 h-px bg-[#C9A84C]" />
+                    <span
+                      className="text-[9px] tracking-[0.32em] uppercase text-white/55"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      Oud &middot; Cedar &middot; Vetiver &middot; Amber
+                    </span>
+                  </div>
+
+                  <h2
+                    className="text-[3.6rem] md:text-[4.4rem] font-light italic leading-none mb-3 text-white"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    For Him
+                  </h2>
+
+                  <p
+                    className="text-white/60 text-[11px] tracking-[0.18em] uppercase mb-7 leading-loose"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    Bold presence &amp; commanding depth
+                  </p>
+
+                  <div className="flex items-center justify-between pt-5 border-t border-white/15">
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="text-[10px] tracking-[0.3em] uppercase text-white/75 group-hover:text-white transition-colors duration-300"
+                        style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                      >
+                        Explore Collection
+                      </span>
+                      <svg
+                        className="w-3.5 h-3.5 text-[#C9A84C] group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </div>
+                    <span
+                      className="text-[9px] tracking-[0.22em] uppercase text-white/30"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      18 Fragrances
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+            <div className="mt-3 grid md:grid-cols-3 gap-3">
+              {[
+                { label: "Crafted in India", detail: "Master perfumers, rare ingredients" },
+                { label: "Up to 12-Hour Sillage", detail: "Long-lasting, skin-hugging formula" },
+                { label: "Signature Packaging", detail: "Gift-ready, every time" },
+              ].map(({ label, detail }) => (
+                <div
+                  key={label}
+                  className="bg-[#0d0d0d] px-7 py-5 flex items-center gap-5"
+                >
+                  <span className="block w-px h-8 bg-[#C9A84C] shrink-0" />
+                  <div>
+                    <p
+                      className="text-[10px] tracking-[0.25em] uppercase text-white mb-1"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      className="text-[11px] text-[#8b8078]"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      {detail}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </section>
 
         {/* <VideoSlider /> */}
 
-        <ProductSlider products={newArrivals} title="New Arrivals" />
-        <ProductSlider products={bestSellers} title="Best Sellers" />
+        <ProductSlider
+          products={newArrivals}
+          title="The New Season"
+          eyebrow="New Arrivals"
+          subtitle="First looks at our latest drops — each crafted for a distinct sensibility"
+          variant="light"
+          viewAllHref="/collections/new"
+        />
+        <ProductSlider
+          products={bestSellers}
+          title="Coveted by Many"
+          eyebrow="Best Sellers"
+          subtitle="The fragrances that have earned their place in thousands of daily rituals"
+          variant="dark"
+          viewAllHref="/collections/bestsellers"
+        />
+
+        {/* ── THE MAISON ATTARO ── */}
+        <section className="w-full bg-[#F6F5F2] py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 xl:gap-28 items-start">
+
+              {/* Brand narrative */}
+              <div>
+                <p
+                  className="text-[10px] tracking-[0.4em] uppercase text-[#C9A84C] mb-5"
+                  style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                >
+                  Our House
+                </p>
+                <span className="block w-8 h-px bg-[#C9A84C] mb-7" />
+                <h2
+                  className="text-4xl md:text-5xl lg:text-[3rem] font-light italic text-[#1a1a1a] leading-[1.1] mb-7"
+                  style={{ fontFamily: "var(--font-cormorant), serif" }}
+                >
+                  Crafted from the<br />Rarest Inspiration
+                </h2>
+                <p
+                  className="text-[#6b6560] text-sm leading-relaxed mb-5 max-w-md"
+                  style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                >
+                  ATTARO was born from a belief that luxury should not be imported — it should be
+                  cultivated. We collaborate with master perfumers to compose fragrances that speak
+                  the language of desire, memory, and identity, using ingredients sourced from the
+                  world's finest olfactory landscapes.
+                </p>
+                <p
+                  className="text-[#6b6560] text-sm leading-relaxed mb-10 max-w-md"
+                  style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                >
+                  Each bottle carries the weight of hundreds of hours of refinement — a discipline
+                  that places ATTARO in the same conversation as the great maisons of the world,
+                  rooted proudly in India by Titan.
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-[#1a1a1a] border-b border-[#1a1a1a]/25 pb-1 hover:text-[#C9A84C] hover:border-[#C9A84C] transition-colors duration-300"
+                  style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                >
+                  Discover Our Story
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Brand pillars — 2×2 bordered grid */}
+              <div className="grid grid-cols-2 gap-px bg-[#dbd8d2]">
+                {[
+                  {
+                    stat: "100%",
+                    label: "Original Formula",
+                    detail: "Authentic, original compositions — every fragrance is a unique creative work, never replicated.",
+                  },
+                  {
+                    stat: "42+",
+                    label: "Rare Ingredients",
+                    detail: "From Grasse florals to Indian oud — a global palette of the finest raw materials.",
+                  },
+                  {
+                    stat: "12h+",
+                    label: "Lasting Sillage",
+                    detail: "Long-tenacity formulas designed to evolve beautifully and linger on warm skin.",
+                  },
+                  {
+                    stat: "India",
+                    label: "Rooted & Proud",
+                    detail: "A luxury house born in India by Titan, crafted to stand alongside the world's finest.",
+                  },
+                ].map(({ stat, label, detail }) => (
+                  <div
+                    key={label}
+                    className="bg-[#F6F5F2] p-8 xl:p-10"
+                  >
+                    <p
+                      className="text-3xl md:text-[2.6rem] font-light italic text-[#1a1a1a] leading-none mb-3"
+                      style={{ fontFamily: "var(--font-cormorant), serif" }}
+                    >
+                      {stat}
+                    </p>
+                    <p
+                      className="text-[9px] tracking-[0.3em] uppercase text-[#C9A84C] mb-3"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      className="text-[12px] text-[#8b7d6b] leading-relaxed"
+                      style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                    >
+                      {detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </section>
 
         <section className="w-full relative">
 
@@ -216,20 +489,38 @@ export default function Home() {
 
                 <div className="max-w-lg text-white flex flex-col items-center justify-center">
 
-                  <h2 className="text-4xl md:text-4xl font-semibold leading-tight mb-2 text-center">
-                    SOME GIFTS SPEAK <br /> BEYOND WORDS
-                  </h2>
-
-                  <p className="text-white/90 leading-relaxed text-md mb-6 text-center">
-                    A gift that captures every feeling unexpressed, every word unsaid
-                    and every emotion unknown, is a gift that lasts forever. Show your
-                    loved ones how much they mean to you with fragrances as unique as
-                    your bond, because some things are #BestSaidWithattaro
+                  <p
+                    className="text-[10px] tracking-[0.4em] uppercase text-[#C9A84C] mb-5"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    Gifting
                   </p>
 
-                  <button className="px-14 py-2.5 font-medium border border-white rounded-full hover:bg-white hover:text-black transition">
+                  <span className="block w-8 h-px bg-[#C9A84C] mb-7" />
+
+                  <h2
+                    className="text-4xl md:text-5xl font-light italic leading-tight mb-5 text-center"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    Some Gifts Speak<br />Beyond Words
+                  </h2>
+
+                  <p
+                    className="text-white/60 leading-relaxed text-[12px] tracking-wide mb-8 text-center"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    A gift that captures every feeling unexpressed, every word unsaid —
+                    fragrances as unique as your bond. Because some things are
+                    best said with ATTARO.
+                  </p>
+
+                  <a
+                    href="#"
+                    className="inline-block text-[11px] tracking-[0.3em] uppercase border border-white/45 px-10 py-3.5 hover:bg-white hover:text-[#0d0d0d] transition-all duration-300"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
                     Gift Now
-                  </button>
+                  </a>
 
                 </div>
 
@@ -327,7 +618,111 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full bg-[#faf8f4] py-24">
+        {/* ── THE OLFACTORY PYRAMID ── */}
+        <section className="w-full bg-[#0d0d0d] py-24">
+          <div className="max-w-7xl mx-auto px-6">
+
+            <div className="text-center mb-16">
+              <p
+                className="text-[10px] tracking-[0.4em] uppercase text-[#C9A84C] mb-5"
+                style={{ fontFamily: "var(--font-jost), sans-serif" }}
+              >
+                The Craft
+              </p>
+              <span className="block w-8 h-px bg-[#C9A84C] mx-auto mb-7" />
+              <h2
+                className="text-4xl md:text-5xl font-light italic text-white leading-[1.1] mb-4"
+                style={{ fontFamily: "var(--font-cormorant), serif" }}
+              >
+                The Olfactory Pyramid
+              </h2>
+              <p
+                className="text-[#8b8078] text-[11px] tracking-[0.2em] uppercase"
+                style={{ fontFamily: "var(--font-jost), sans-serif" }}
+              >
+                How a fragrance lives, breathes, and evolves on skin
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-px bg-white/6">
+              {[
+                {
+                  number: "01",
+                  tier: "Top Notes",
+                  window: "First 15 – 30 minutes",
+                  desc: "The opening act — bright, light, and immediate. These are the notes you encounter the moment the fragrance first touches your skin.",
+                  notes: ["Bergamot", "Green Tea", "Citrus", "Aldehydes"],
+                },
+                {
+                  number: "02",
+                  tier: "Heart Notes",
+                  window: "30 minutes – 4 hours",
+                  desc: "The soul of the fragrance. As the top notes gently fade, the heart blooms — rich, nuanced, and deeply expressive of the perfumer's intent.",
+                  notes: ["Rose Absolute", "Jasmine Sambac", "Iris", "Ylang-Ylang"],
+                },
+                {
+                  number: "03",
+                  tier: "Base Notes",
+                  window: "4 – 12 hours",
+                  desc: "The lasting signature that anchors everything above it. Deep, warm, and unforgettable — still present long after the day is done.",
+                  notes: ["Oud", "Sandalwood", "White Musk", "Amber"],
+                },
+              ].map(({ number, tier, window, desc, notes }) => (
+                <div
+                  key={tier}
+                  className="bg-[#0d0d0d] px-8 md:px-10 py-10 border-t border-white/6"
+                >
+                  <div className="flex items-start gap-4 mb-6">
+                    <span
+                      className="text-[4.5rem] font-light text-white/[0.07] leading-none mt-1 shrink-0"
+                      style={{ fontFamily: "var(--font-cormorant), serif" }}
+                    >
+                      {number}
+                    </span>
+                    <div className="pt-2">
+                      <p
+                        className="text-[9px] tracking-[0.35em] uppercase text-[#C9A84C] mb-2"
+                        style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                      >
+                        {window}
+                      </p>
+                      <h3
+                        className="text-2xl md:text-[1.9rem] font-light italic text-white"
+                        style={{ fontFamily: "var(--font-cormorant), serif" }}
+                      >
+                        {tier}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <span className="block w-7 h-px bg-[#C9A84C] mb-6" />
+
+                  <p
+                    className="text-[#a8a09a] text-[13px] leading-relaxed mb-7"
+                    style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                  >
+                    {desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {notes.map((note) => (
+                      <span
+                        key={note}
+                        className="text-[9px] tracking-[0.2em] uppercase text-white/35 border border-white/10 px-3 py-1.5"
+                        style={{ fontFamily: "var(--font-jost), sans-serif" }}
+                      >
+                        {note}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        <section className="w-full bg-[#F6F5F2] py-24">
 
           <div className="max-w-7xl mx-auto px-6">
 
@@ -349,7 +744,7 @@ export default function Home() {
                 { name: "Neha Kapoor", city: "Bangalore", review: "Absolutely love the elegance of these perfumes. Beautiful packaging and the scent lasts surprisingly long." },
                 { name: "Kabir Singh", city: "Chandigarh", review: "The fragrance profile is sophisticated and long-lasting. Definitely my new everyday signature scent." },
               ].map((t) => (
-                <div key={t.name} className="min-w-[290px] max-w-[320px] bg-white p-8 border border-[#e8e0d5]">
+                <div key={t.name} className="min-w-[290px] max-w-[320px] bg-[#FEFEFE] p-8 border border-[#E2DFDA]">
 
                   <div className="flex gap-0.5 mb-5">
                     {[...Array(5)].map((_, i) => (
@@ -414,7 +809,66 @@ export default function Home() {
 
         </div>
 
-        <section className="w-full bg-[#faf8f4]">
+        {/* ── PRESS & RECOGNITION ── */}
+        <section className="w-full bg-[#F6F5F2] py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-6">
+
+            <div className="text-center mb-12">
+              <p
+                className="text-[10px] tracking-[0.4em] uppercase text-[#C9A84C] mb-3"
+                style={{ fontFamily: "var(--font-jost), sans-serif" }}
+              >
+                Press & Recognition
+              </p>
+              <p
+                className="text-[11px] tracking-[0.25em] uppercase text-[#b0a898]"
+                style={{ fontFamily: "var(--font-jost), sans-serif" }}
+              >
+                As Seen In
+              </p>
+            </div>
+
+            {/* Publication names */}
+            <div className="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-16 gap-y-4 mb-14">
+              {[
+                { name: "Vogue", size: "text-[1.7rem] md:text-[2.1rem]" },
+                { name: "Harper's Bazaar", size: "text-[1.25rem] md:text-[1.6rem]" },
+                { name: "GQ", size: "text-[1.7rem] md:text-[2.1rem]" },
+                { name: "Elle", size: "text-[1.7rem] md:text-[2.1rem]" },
+                { name: "Cosmopolitan", size: "text-[1.2rem] md:text-[1.5rem]" },
+                { name: "Femina", size: "text-[1.4rem] md:text-[1.75rem]" },
+              ].map(({ name, size }) => (
+                <span
+                  key={name}
+                  className={`${size} font-light italic text-[#c5bfb7] hover:text-[#1a1a1a] transition-colors duration-300 cursor-default tracking-wide`}
+                  style={{ fontFamily: "var(--font-cormorant), serif" }}
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
+
+            {/* Featured press quote */}
+            <div className="border-t border-[#e2dfda] pt-12 max-w-2xl mx-auto text-center">
+              <span className="block w-8 h-px bg-[#C9A84C] mx-auto mb-8" />
+              <p
+                className="text-xl md:text-[1.65rem] font-light italic text-[#1a1a1a] leading-[1.45] mb-6"
+                style={{ fontFamily: "var(--font-cormorant), serif" }}
+              >
+                "ATTARO is redefining what Indian luxury fragrance means — not just for the subcontinent, but for the world stage."
+              </p>
+              <p
+                className="text-[10px] tracking-[0.32em] uppercase text-[#8b7d6b]"
+                style={{ fontFamily: "var(--font-jost), sans-serif" }}
+              >
+                — Vogue India &nbsp;&middot;&nbsp; 2025
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <section className="w-full bg-[#F6F5F2]">
 
           <div className="max-w-7xl mx-auto px-6 py-24">
             <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
@@ -464,7 +918,7 @@ export default function Home() {
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="flex-1 px-5 py-4 border border-[#d4c9b8] bg-white text-sm focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
+                    className="flex-1 px-5 py-4 border border-[#dbd8d2] bg-white text-sm focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
                   />
                   <button className="px-8 py-4 bg-[#0d0d0d] text-white text-[11px] tracking-[0.25em] uppercase hover:bg-[#C9A84C] transition-colors duration-300 whitespace-nowrap mt-3 sm:mt-0">
                     Subscribe
@@ -568,22 +1022,32 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-6 py-14">
+          <div className="max-w-7xl mx-auto px-6 py-14 border-t border-[#e8e0d5]">
 
-            <h3 className="text-xl md:text-2xl font-light italic text-[#1a1a1a] mb-5">
+            <h3
+              className="text-xl md:text-2xl font-light italic text-[#1a1a1a] mb-5"
+              style={{ fontFamily: "var(--font-cormorant), serif" }}
+            >
               Explore ATTARO's Perfume Collection — Premium and Long-lasting Fragrances for Every Mood
             </h3>
 
-            <p className="text-[#6b6560] leading-relaxed text-sm max-w-4xl">
+            <p
+              className="text-[#6b6560] leading-relaxed text-sm max-w-4xl"
+              style={{ fontFamily: "var(--font-jost), sans-serif" }}
+            >
               Welcome to the world of fragrances from ATTARO. Every fragrance in the ATTARO perfume collection
-              is an invitation to embrace elegance and timeless luxury. Crafted in France with meticulous care, ATTARO perfumes
-              blend premium quality with contemporary flair, offering long-lasting perfumes that redefine sophistication.
+              is an invitation to embrace elegance and timeless luxury. Crafted with meticulous care, ATTARO perfumes
+              blend premium quality with contemporary flair, offering long-lasting fragrances that redefine sophistication.
             </p>
 
             <div className="flex justify-end mt-6">
-              <button className="text-[#C9A84C] text-xs tracking-[0.25em] uppercase hover:opacity-70 transition-opacity duration-200 border-b border-[#C9A84C] pb-0.5">
+              <a
+                href="#"
+                className="text-[#C9A84C] text-[10px] tracking-[0.3em] uppercase hover:opacity-70 transition-opacity duration-200 border-b border-[#C9A84C] pb-0.5"
+                style={{ fontFamily: "var(--font-jost), sans-serif" }}
+              >
                 Know More
-              </button>
+              </a>
             </div>
 
           </div>
